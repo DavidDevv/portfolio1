@@ -18,6 +18,9 @@
 
         <!-- ICON TITLE -->
         <link rel="shortcut icon" href="assets/img/about1.png">
+        
+        <!--==================== FONTAWESOME ====================-->
+        <script src="https://kit.fontawesome.com/c2c421e08c.js" crossorigin="anonymous"></script>
 
         <title>DAV.ID</title>
     </head>
@@ -106,7 +109,7 @@
                         <div class="home__data" data-aos="fade-down">
                             <h1 class="home__title">Hi, I'am David Saputra</h1>
                             <h3 class="home__subtitle">Graphic Designer</h3>
-                            <p class="home__description">beginner programmer as well as graphic design, computer science and design enthusiast</p>
+                            <p class="home__description"></p>
                             <a href="#contact" class="button button--flex">
                                 Contact Me<i class="uil uil-message button__icon"></i>
                             </a>
@@ -129,25 +132,12 @@
                 <span class="section__subtitle">Perkenalan</span>
                 
                 <div class="about__container container grid">
-                    <img src="assets/img/about1.png" alt="" class="about__img">
+                    <img src="assets/img/about2.jpg" alt="" class="about__img">
 
                     <div class="about__data">
                         <p class="about__description">Fresh Graduate, graphic designer, front end develOper, UI/UX</p>
 
-                        <div class="about__info">
-                            <span class="about__info-title">1+</span>
-                            <span class="about__info-name">tahun <br> pengalaman Belajar</span>
-                        </div>
-
-                        <div class="about__info">
-                            <span class="about__info-title">13</span>
-                            <span class="about__info-name">Projek <br> </span>
-                        </div>
-
-                        <div class="about__info">
-                            <span class="about__info-title">1</span>
-                            <span class="about__info-name">Pengalaman magang <br> </span>
-                        </div>
+                        
                     </div>
 
                     <div class="about__buttons">
@@ -182,21 +172,21 @@
                                    <div class="skills__data">
                                        <div class="skills__titles">
                                            <h3 class="skills__name">HTML</h3>
-                                          
+                                           <i class="uil uil-html5"></i>
                                        </div>
                                       
                                    </div>
                                    <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">CSS</h3>
-                                        
+                                        <i class="uil uil-css3-simple"></i>
                                     </div>
                                    
                                 </div>
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">PHP</h3>
-                                        
+                                        <i class="fa-brands fa-php"></i>    
                                     </div>
                                    
                                 </div>
@@ -220,31 +210,32 @@
                                     <div class="skills__data">
                                         <div class="skills__titles">
                                             <h3 class="skills__name">Figma</h3>
-                                            
+                                            <i class="fa-brands fa-figma"></i>
                                         </div>
                                      
                                     </div>
                                     <div class="skills__data">
                                      <div class="skills__titles">
                                          <h3 class="skills__name">Photoshop</h3>
-                                        
+                                         <i class="fa-solid fa-p"></i>
                                      </div>
                                     
                                  </div>
                                  <div class="skills__data">
                                      <div class="skills__titles">
                                          <h3 class="skills__name">Pixellab(mobile)</h3>
-                                        
+                                         <i class="fa-solid fa-p"></i>
                                      </div>
                                    
                                  </div>
                                  <div class="skills__data">
                                      <div class="skills__titles">
-                                         <h3 class="skills__name">sketch</h3>
-                                        
+                                         <h3 class="skills__name">Canva</h3>
+                                         <i class="fa-solid fa-c"></i>
                                      </div>
                                     
                                   </div>
+                                  
                                 </div>
                             </div>
                            <!--==================== SKILLS 3====================-->
@@ -256,7 +247,7 @@
                                      <h1 class="skills__title">Office</h1>
                                      <span class="skills__subtilte">Microsoft</span>
                                  </div>
- 
+                                 
                                  <i class="uil uil-angle-down skills__arrow"></i>
                                 </div>
  
@@ -265,14 +256,17 @@
                                         <div class="skills__titles">
                                             <h3 class="skills__name">Word</h3>
                                     </div>
+                                    <i class="fa-regular fa-file-word"></i>
                                     <div class="skills__data">
                                      <div class="skills__titles">
                                          <h3 class="skills__name">Excel</h3>
                                  </div>
+                                 <i class="fa-regular fa-file-excel"></i>
                                  <div class="skills__data">
                                      <div class="skills__titles">
                                          <h3 class="skills__name">PowerPoint</h3>
                                  </div>
+                                 <i class="fa-regular fa-file-powerpoint"></i>
                                   </div>
                                 </div>
                             </div>
@@ -533,8 +527,11 @@
         </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
         <script>
-            gsap.from('.home__blob',{duration: 1, y:-100, opacity: 0, ease:'bounce'}); 
+            gsap.registerPlugin(TextPlugin);
+            gsap.to('.home__description', {duration: 2, delay: 1.5, text:'beginner programmer as well as graphic design, computer science and design enthusiast' });
+            gsap.from('.home__blob',{duration: 2, y:-100, opacity: 0, ease:'bounce'}); 
         </script>
     </body>
 </html>
